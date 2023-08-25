@@ -10,3 +10,7 @@ test('Reverse a string', () => {
     expect(myTest.reverseString('hello')).toBe('olleh');
 });
 
+test('Ceaser Cipher', () => {
+    expect(myTest.ceaserCipher('hello', 1)).toBe('ifmmp');
+});
+
