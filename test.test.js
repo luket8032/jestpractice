@@ -1,6 +1,12 @@
-const capitalize = require('./test.js')
+const testFn = require('./test.js')
 
-test('capitalize', () => {
-    expect(capitalize('hello')).toBe('Hello');
+const myTest = testFn();
+
+test('Capitalize', () => {
+    expect(myTest.capitalize('hello')).toBe('Hello');
+});
+
+test('Reverse a string', () => {
+    expect(myTest.reverseString('hello')).toBe('olleh');
 });
 
