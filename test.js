@@ -30,16 +30,32 @@ const testFn = () => {
                     shifted[index] = chars[chars.indexOf(letter) + shiftNum];
                 }
             }
-        })
+        });
 
         return shifted.join('');
     }
 
-    return { capitalize, reverseString, ceaserCipher};
+    function analyzeArray(arr) {
+        let total = 0;
+        arr.forEach(num => total += num);
+
+        const minVal = Math.min(...arr);
+        const maxVal = Math.max(...arr);
+        const lengthVal = arr.length;
+
+        return {
+            "average": total / lengthVal,
+            "min": minVal,
+            "max": maxVal,
+            "length": lengthVal
+        }
+    }
+
+    return { capitalize, reverseString, ceaserCipher, analyzeArray };
 }
 
 const me = testFn();
-console.log(me.ceaserCipher('hel lz', 2))
+console.log(me.analyzeArray([1,8,3,4,2,6]))
 
 module.exports = testFn;
 
